@@ -1,17 +1,23 @@
-html{
-    
-}
+
 main{
-   background-color: blueviolet;
+   background-color: rgb(152, 83, 216);
     color: darkslategrey;
-    height:100%;
+    margin: auto;
+    padding: 5vh;
+    border-radius: 1.5rem;
+    /* display: grid;
+    gap:1.5rem;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 1fr; */
+}
+
+article{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    height: 70vh;
-    align-items: center;
-    justify-content: center;
-    margin-left: 8rem;
-    
+    grid-template-columns: repeat(3,1fr);
+    gap:1rem;
+    border-radius: .5rem;
+    background-color: rgb(72, 22, 100);
+    padding:2rem;
 }
 body{
     background-color: rgb(35,35,35);
@@ -19,14 +25,18 @@ body{
 /*Headers*/
 header
 {
-    height: 5%;
-    background-color: rgb(35,35,35);
+    width: 100%;
+    /* justify-content: flex-start;
+    display: flex; */
+    /* flex-shrink: 1; */
+    background-color: rgb(92, 86, 86);
+    
+
 }
 h1{
     color: lightgrey;
-    font-size: 5em;
-    text-align: center;
-
+    position: inherit;
+    
 }
 h2{
     color: rgb(208,208,208);
@@ -34,66 +44,137 @@ h2{
     text-align: center;
     padding: 10px;
 }
+h3{
+    color: rgb(208,208,208);
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0%;
+}
+p{
+    color: rgb(208,208,208);
+}
 footer
 {
     background-color: rgb(35,35,35);
-    height: 5%;
+    height: 10vh;
     color: rgb(208,208,208);
     
 }
 /*Classes*/
-.wrapper
-{
-margin-left:-100px;
-display: flex;
+.grid-col-span-2{
+    grid-column-start: 2;
+    grid-column-end:4;
 }
-.stuff
-{
-    position: relative;
-    left: 1px;
-    flex:1;
+.checkout-box{
+    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
 }
-.subtext
-{
-    text-align: center;
-}
+
 .inputbox
 {
     display: flex;
     flex: 2;
     align-items: center;
-    flex-direction: column;
-    
+    flex-direction: column; 
 }
+.line
+{
+    border-style: solid;
+    border-color:rgb(208,208,208);
+    border-width: 1px;
+}
+.checkout
+{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+.checkout-plan-description,.cart-total
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 /*Misc*/
 form{
     width: auto;
     height: 100%;
-    flex-direction: column;
-    margin-left: 4rem;
-    margin-top:2rem;
+    grid-column: span 2;
 }
-input{
-    width: 35vw;
+input,.create-account{
+    min-width: 80%;
+    flex-grow: 1;
     color:black;
     text-decoration-color: black;
-    text-emphasis-color: black;
-    background-color: beige;
-    height: 60;
-    margin-bottom: 1em;
-}
-@media (max-width:600px) {
+    font-size:2rem;
     
-    input{
-        width: 70vw;
+    text-emphasis-color: black;
+    background-color: rgb(129, 129, 121);
+    min-height:3rem;
+    margin-bottom: 1em;
+    border-radius: .5rem;
+    border-style: solid;
+    border-color:transparent;
+}
+.create-account
+{
+    background-color: rgb(208,208,208);
+}
+section{
+   border-style: solid;
+   border-color: transparent;
+   flex-grow: 0.5;
+   
+}
+@media (max-width:725px) {
+
+    /* .checkout-box{
+        grid-row-start: 2;
+        grid-column:span 3;
     }
-    main{
+    .grid-col-span-2
+    {
+        grid-column: span 3;
+        grid-row:1;
+    } */
+    article{
         display: flex;
         flex-direction: column;
-        margin-left: 2rem;
-        margin-right:2rem;
     }
-    form{
-        margin-left: 2rem;
+    h2{
+        font-size: 2rem;
     }
+    input,.create-account{
+        min-width: 95%;
+        font-size: 1.5rem;
+        margin-left :-1rem;
+    }
+}
+@media (min-width:1200px) {
+    main{
+        padding-left: 20vw;
+        padding-right: 20vw;
+
+    }
+    
+}
+@media (max-width:375px)
+{
+input.create-account{
+    max-width: 95%;
+    font-size: 1.25rem;
+}
+}
+
+@media (max-width:390px) 
+{
+    input,.create-account{
+        max-width:100%;
+        flex-grow:1;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+    
 }
