@@ -19,12 +19,12 @@
             <article>
                 <form>
                     <div class="input-box">
-                        <input type="text" name="name" placeholder="Your Name here:"/>
-                        <input type="text" name="surname" placeholder="Your surname here:"/>
-                        <input type="email" name="email" placeholder="example@123mail.com:"/>
-                        <input type="password" name="password" placeholder="create a password:"/>
-                        <input type="password" name="confirm-password" placeholder="confirm password:"/>
-                        <button class="create-account">Create Account</button>
+                        <input type="text" name="name" id = "nameInput" onblur="verifyNameInput('nameInput')" placeholder ="Your Name here"/>
+                        <input type="text" name="surname" id = "surnameInput" onblur="verifyNameInput('surnameInput')" placeholder="Your surname here"/>
+                        <input type="email" name="email" id = "emailInput" onblur="verifyEmailInput('emailInput')" placeholder="example@123mail.com"/>
+                        <input type="password" name="password" id = "createPasswordInput" placeholder="create a password"/>
+                        <input type="password" name="confirm-password" id ="confirmPasswordInput" onkeyup="confirmPasswordMatch()" placeholder="confirm password"/>
+                        <button class="create-account" onclick="aLittleMeme()">Create Account</button>
                     </div>
                 </form>
                 <section class="checkout-box">
@@ -47,5 +47,6 @@
                 </section>    
             </article>
         </main>
+    <script src="scripts/myjs.js"></script>
     </body>
 </html>

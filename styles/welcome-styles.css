@@ -117,6 +117,18 @@ input,.create-account{
     border-radius: .5rem;
     border-style: solid;
     border-color:transparent;
+    justify-content: s;
+}
+input:hover
+{
+    background-color: rgb(152, 83, 216);
+    border-color: yellow;
+}
+.create-account:hover
+{
+    border-color: yellowgreen;
+    background-color: yellow;
+    
 }
 .create-account
 {
