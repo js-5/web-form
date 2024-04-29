@@ -1,4 +1,4 @@
-
+let validation = false;
 function verifyNameInput(inputBox)
 {
     let input = document.getElementById(inputBox);
@@ -52,4 +52,6 @@ function confirmPasswordMatch()
 function aLittleMeme()
 {
     alert('you weren\' supposed to do that!');
+    let thisNote =document.getElementById("checkout-sub-notice");
+    thisNote.value = 'YOU WEREN"T SUPPOSED TO DO THAT';
 }

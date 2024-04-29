@@ -14,17 +14,17 @@
         <header>
             <h1>FloMax</h1>
         </header>    
-            <h2>Create your account today</h2>
+            <h2>create your account today</h2>
         <main>
             <article>
                 <form>
                     <div class="input-box">
-                        <input type="text" name="name" id = "nameInput" onblur="verifyNameInput('nameInput')" placeholder ="Your Name here"/>
-                        <input type="text" name="surname" id = "surnameInput" onblur="verifyNameInput('surnameInput')" placeholder="Your surname here"/>
-                        <input type="email" name="email" id = "emailInput" onblur="verifyEmailInput('emailInput')" placeholder="example@123mail.com"/>
-                        <input type="password" name="password" id = "createPasswordInput" placeholder="create a password"/>
-                        <input type="password" name="confirm-password" id ="confirmPasswordInput" onkeyup="confirmPasswordMatch()" placeholder="confirm password"/>
-                        <button class="create-account" onclick="aLittleMeme()">Create Account</button>
+                        <input type="text" name="name" id = "nameInput" onblur="verifyNameInput('nameInput')" placeholder ="your name here" required/>
+                        <input type="text" name="surname" id = "surnameInput" onblur="verifyNameInput('surnameInput')" placeholder="your surname here" required/>
+                        <input type="email" name="email" id = "emailInput" onblur="verifyEmailInput('emailInput')" placeholder="example@123mail.com" required/>
+                        <input type="password" name="password" id = "createPasswordInput" placeholder="create a password" required/>
+                        <input type="password" name="confirm-password" id ="confirmPasswordInput" onkeyup="confirmPasswordMatch()" placeholder="confirm password" required/>
+                        <input type="submit" class="create-account" onclick="aLittleMeme()" value="Create Account"/>
                     </div>
                 </form>
                 <section class="checkout-box">
@@ -40,7 +40,7 @@
                             <p class="checkout-total">R69.00</p>
                         </section>
                         <section class="checkout-sub-notice">
-                            <p class="checkout-sub-notice">Then,the standard Monthly Fee will apply.</p>
+                            <p class="checkout-sub-notice" id = "checkout-sub-notice">Then,the standard Monthly Fee will apply.</p>
                             <p class="checkout-sub-management"> Manage your subscription by visiting you Account</p>
                         </section>
                     </section>
