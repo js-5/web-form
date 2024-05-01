@@ -19,12 +19,12 @@
             <article>
                 <form>
                     <div class="input-box">
-                        <input type="text" name="name" id = "nameInput" onblur="verifyNameInput('nameInput')" placeholder ="your name here" required/>
-                        <input type="text" name="surname" id = "surnameInput" onblur="verifyNameInput('surnameInput')" placeholder="your surname here" required/>
-                        <input type="email" name="email" id = "emailInput" onblur="verifyEmailInput('emailInput')" placeholder="example@123mail.com" required/>
+                        <input type="text" name="name" id = "nameInput"  placeholder ="your name here" required/>
+                        <input type="text" name="surname" id = "surnameInput"  placeholder="your surname here" required/>
+                        <input type="email" name="email" id = "emailInput"  placeholder="example@123mail.com" required/>
                         <input type="password" name="password" id = "createPasswordInput" placeholder="create a password" required/>
-                        <input type="password" name="confirm-password" id ="confirmPasswordInput" onkeyup="confirmPasswordMatch()" placeholder="confirm password" required/>
-                        <input type="submit" class="create-account" onclick="aLittleMeme()" value="Create Account"/>
+                        <input type="password" name="confirm-password" id ="confirmPasswordInput"  placeholder="confirm password" required/>
+                        <input type="submit" class="create-account"  value="Create Account" />
                     </div>
                 </form>
                 <section class="checkout-box">
@@ -47,6 +47,7 @@
                 </section>    
             </article>
         </main>
-    <script src="scripts/myjs.js"></script>
+    <script type='module' src="scripts/main.js"> 
+    </script>
     </body>
 </html>

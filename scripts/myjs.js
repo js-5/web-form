@@ -1,57 +1,37 @@
-let validation = false;
-function verifyNameInput(inputBox)
-{
-    let input = document.getElementById(inputBox);
-    let inputValue = input.value;
-    console.log(inputValue);
-    if ((typeof (inputValue) != undefined) && (typeof (inputValue) != null) && (isEmptyString(inputValue) == false)) {
-        changeValidationPass(inputBox);
+ export class Validation {
+    constructor() {
+        this.firstName = false;
+        this.lastName = false;
+        this.email = false;
+        this.password = false;
+        this.confirmPassword = false;
+        this.allClear = false;
     }
-    else changeValidationFail(inputBox);
-}
-function verifyEmailInput(inputBox)
-{   
-    let input = document.getElementById(inputBox);
-    let inputValue = input.value;
-    const emailRegex =
-    new RegExp(/^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/, "gm");
-    let isValidEmail = emailRegex.test(inputValue);
-    console.log(isValidEmail)
-    if(isValidEmail)
-        changeValidationPass(inputBox);
-    else    changeValidationFail(inputBox);
 
+    validateName(inputSelectionField)
+    {
+        let input = document.getElementById(inputSelectionField);
+        let inputValue = input.value;
+        console.log(inputValue);
+        switch(inputSelectionField){
+        case 'nameInput':
+            if(lengthNotZero(inputValue)){
+                this.firstName = true;
+                input.classList.remove('invalid');
+                input.classList.add('valid');
+            }else
+                input.classList.add('invalid');
+            break;
+        case 'surnameInput':
+            if(lengthNotZero(inputValue)){
+                this.lastName = true;
+                input.classList.remove('invalid');
+                input.classList.add('valid');
+            }else
+                input.classList.add('invalid');
+            break;
+    }
+    }  
 }
-function isEmptyString(str){
-    return str.length === 0;
-}
-function changeValidationPass(inputElementID)
-{
-    let inputbox =   document.getElementById(inputElementID);
-            inputbox.style.borderColor = "green";
-            inputbox.style.borderRadius = ".5rem";
-            inputbox.style.backgroundColor = "white";
-}
-function changeValidationFail(inputElementID)
-{
-    let inputbox =   document.getElementById(inputElementID);
-            inputbox.style.borderColor = "red";
-            inputbox.style.borderRadius = ".5rem";
-            inputbox.style.backgroundColor = "white";
-}
-function confirmPasswordMatch()
-{
-    let passwordInput = document.getElementById("createPasswordInput");
-    let confirmPasswordInput = document.getElementById("confirmPasswordInput");
-    let password = passwordInput.value;
-    let passwordConfirm = confirmPasswordInput.value;
-    if(password === passwordConfirm)
-        changeValidationPass("createPasswordInput");
-    else    changeValidationPass("confirmPasswordInput");
-}
-function aLittleMeme()
-{
-    alert('you weren\' supposed to do that!');
-    let thisNote =document.getElementById("checkout-sub-notice");
-    thisNote.value = 'YOU WEREN"T SUPPOSED TO DO THAT';
-}
+
+//document.getElementById('surnameInput').addEventListener("onblur",check.validateName('surnameInput'));

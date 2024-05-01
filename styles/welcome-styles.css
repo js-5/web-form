@@ -96,7 +96,17 @@ footer
     flex-direction: row;
     justify-content: space-between;
 }
+.valid
+{
+    border-color: green;
+    border-width: .5rem;
 
+}
+.invalid
+{
+    border-color: red;
+    border-width: .25rem;
+}
 /*Misc*/
 form{
     width: auto;
