@@ -140,6 +140,19 @@ section{
    flex-grow: 0.5;
    
 }
+.validationPass
+{
+    border-color: green;
+    border-radius: .5rem;
+    border-style: solid;
+}
+.validationFail
+{
+    border-Color : red;
+    border-Radius : .5rem;
+    border-style: dotted;
+
+}
 @media (max-width:725px) {
 
     /* .checkout-box{
